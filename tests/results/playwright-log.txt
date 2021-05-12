@@ -1,0 +1,4 @@
+{"level":30,"time":"2021-02-09T21:27:07.087Z","pid":17448,"hostname":"3CNRJ001786N","msg":"Listening on 63768"}
+{"level":30,"time":"2021-02-09T21:27:07.874Z","pid":17448,"hostname":"3CNRJ001786N","msg":"Changed active context"}
+{"level":30,"time":"2021-02-09T21:27:08.286Z","pid":17448,"hostname":"3CNRJ001786N","msg":"Video path: undefined"}
+{"level":30,"time":"2021-02-09T21:27:08.287Z","pid":17448,"hostname":"3CNRJ001786N","msg":"Changed active page"}
