@@ -1,5 +1,5 @@
 ***Settings***
-Documentation       Testes usando if
+Documentation       Testes usando if incluindo mas casos com versionamento
 
 Library     SeleniumLibrary
 
