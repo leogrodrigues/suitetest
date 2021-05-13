@@ -12,6 +12,13 @@ ${URL_API}      https://fakerestapi.azurewebsites.net/api/v1/
 &{Book_15}      id=15
 ...             title=Book 15
 ...             pageCount=1500
+
+&{Book_Novo}    id=1
+...             title=Teste
+...             description=Teste
+...             pageCount=100
+...             excerpt=Teste
+...             publishDate=2021-05-13T21:06:42.713Z
   
 
 
@@ -49,3 +56,24 @@ Conferir se retornam todos os dados corretos do livro 15
     Should Not Be Empty     ${RESPOSTA.json()["description"]}
     Should Not Be Empty     ${RESPOSTA.json()["excerpt"]}
     Should Not Be Empty     ${RESPOSTA.json()["publishDate"]}
+
+Cadastrar um novo livro
+    ${Headers}      Create Dictionary       content-type=application/json
+    ${RESPOSTA}     Post On Session     fakeAPI     Books
+    ...                                 data={"id": 1, "title": "Teste", "description": "Teste", "pageCount": 100, "excerpt": "Teste", "publishDate": "2021-05-13T21:06:42.713Z"}
+    ...                                 headers=${Headers}
+    Log     ${RESPOSTA.text}
+    Set Test Variable      ${RESPOSTA}
+
+Conferir se retornam todos os dados corretos do livro criado
+    Dictionary Should Contain Item      ${RESPOSTA.json()}    id                ${Book_Novo.id}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}    title             ${Book_Novo.title}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}    pageCount         ${Book_Novo.pageCount}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}    description       ${Book_Novo.description}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}    excerpt           ${Book_Novo.excerpt}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}    publishDate       ${Book_Novo.publishDate}
+
+Conferir se retorna todos os dados alteradosdo livro 150
+    ${RESPOSTA}     Get On Session     fakeAPI     Books/150
+    Log     ${RESPOSTA.text}
+    Set Test Variable      ${RESPOSTA}

@@ -17,12 +17,16 @@ Teste de FOR do tipo IN RAGE
 
 
 Teste de FOR do tipo IN
-
+    [Documentation]     Faz um loop percorrendo a lista que vc passar e percorre o indice da lista
+    Usando For In
 
 Teste de FOR do tipo IN ENUMERATE
-
+    [Documentation]     Faz um loop percorrendo a lista que vc passar e percorre o indice da lista
+    Usando For In Enumerate
 
 Teste de SAIR do FOR
+    [Documentation]     Vc controla qnd o FOR deve ser encerrado antes de terminar todos os loops
+    Usando For Exit
 
 
 *Keywords*
@@ -36,6 +40,24 @@ Usando In Rage
         Log To Console      Minha posição agora é: ${CONTADOR}
     END
 
+Usando For In
+    Log To Console      ${\n}
+    FOR     ${FRUTA}    IN      @{MINHA_LISTA}
+        Log To Console      Minha fruta é: ${FRUTA}
+    END
+
+Usando For In Enumerate
+    Log To Console      ${\n}
+    FOR     ${INDICE}   ${FRUTA}    IN ENUMERATE      @{MINHA_LISTA}
+        Log To Console      Minha fruta é: ${INDICE} --> ${FRUTA}
+    END
+
+Usando For Exit
+    Log To Console      ${\n}
+    FOR     ${INDICE}   ${FRUTA}    IN ENUMERATE      @{MINHA_LISTA}
+        Log To Console      Minha fruta é: ${INDICE} --> ${FRUTA}
+        Exit For Loop If    '${FRUTA}'=='banana'    
+    END
 
 
 
