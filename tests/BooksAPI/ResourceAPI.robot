@@ -77,3 +77,5 @@ Conferir se retorna todos os dados alteradosdo livro 150
     ${RESPOSTA}     Get On Session     fakeAPI     Books/150
     Log     ${RESPOSTA.text}
     Set Test Variable      ${RESPOSTA}
+
+    
