@@ -1,0 +1,23 @@
+{"level":30,"time":"2021-02-09T20:18:26.434Z","pid":21576,"hostname":"3CNRJ001786N","msg":"Listening on 60958"}
+{"level":30,"time":"2021-02-09T20:18:27.143Z","pid":21576,"hostname":"3CNRJ001786N","msg":"Changed active context"}
+{"level":30,"time":"2021-02-09T20:18:27.528Z","pid":21576,"hostname":"3CNRJ001786N","msg":"Video path: undefined"}
+{"level":30,"time":"2021-02-09T20:18:27.528Z","pid":21576,"hostname":"3CNRJ001786N","msg":"Changed active page"}
+================= Original suppressed error =================
+page.goto: Timeout 10000ms exceeded.
+=========================== logs ===========================
+navigating to "http://automationpractice.com", waiting until "load"
+============================================================
+Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+    at Connection.sendMessageToServer (c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\connection.js:69:15)
+    at Proxy.<anonymous> (c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\channelOwner.js:44:61)
+    at c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\frame.js:80:71
+    at Frame._wrapApiCall (c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\channelOwner.js:72:34)
+    at Frame.goto (c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\frame.js:78:21)
+    at c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\page.js:270:60
+    at Page._attributeToPage (c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\page.js:205:20)
+    at Page.goto (c:\python39\lib\site-packages\Browser\wrapper\node_modules\playwright\lib\client\page.js:270:21)
+    at Object.<anonymous> (c:\python39\lib\site-packages\Browser\wrapper\index.js:66449:47)
+    at step (c:\python39\lib\site-packages\Browser\wrapper\index.js:66432:23) {
+  name: 'TimeoutError'
+}
+=============================================================
